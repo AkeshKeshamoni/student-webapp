@@ -7,7 +7,7 @@
 
     <groupId>com.student</groupId>
     <artifactId>student-webapp</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>war</packaging>
 
     <name>Student WebApp</name>
@@ -20,7 +20,10 @@
 
     <build>
         <finalName>student-webapp</finalName>
+
         <plugins>
+
+            <!-- WAR Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
@@ -29,6 +32,14 @@
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
+
+            <!-- Compiler Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+            </plugin>
+
         </plugins>
     </build>
 
